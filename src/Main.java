@@ -6,4 +6,5 @@ public class Main {
         main.beverage = new Milk(new Mocha(new DarkRoast()));
         System.out.println("En " + main.beverage.getDescription() + " som kostar " + main.beverage.cost() + " kr");
     }
+
 }
