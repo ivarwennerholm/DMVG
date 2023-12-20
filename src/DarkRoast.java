@@ -3,11 +3,11 @@ public class DarkRoast extends Beverage {
 
 
     public DarkRoast() {
-        super.description = "Dark Roast";
+        super.description = "mörkrost";
     }
 
     @Override
-    int cost() {
+    public int cost() {
         return 40;
     }
 

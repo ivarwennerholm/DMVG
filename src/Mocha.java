@@ -5,11 +5,11 @@ public class Mocha extends CondimentDecorator {
         this.decoratedBeverage = decoratedBeverage;
     }
 
-    int cost() {
+    public int cost() {
         return this.decoratedBeverage.cost() + 15;
     }
     @Override
-    String getDescription() {
-        return this.decoratedBeverage.getDescription() + " + Mocha";
+    public String getDescription() {
+        return this.decoratedBeverage.getDescription() + " + mocha";
     }
 }

@@ -1,9 +1,9 @@
 
 public abstract class Beverage {
-    String description;
+    protected String description;
 
-    abstract int cost();
-    String getDescription() {
+    public abstract int cost();
+    public String getDescription() {
         return description;
     }
 }

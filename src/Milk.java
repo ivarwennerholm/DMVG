@@ -6,11 +6,11 @@ public class Milk extends CondimentDecorator {
         this.decoratedBeverage = decoratedBeverage;
     }
 
-    int cost() {
+    public int cost() {
         return this.decoratedBeverage.cost() + 10;
     }
     @Override
-    String getDescription() {
-        return this.decoratedBeverage.getDescription() + " + Milk";
+    public String getDescription() {
+        return this.decoratedBeverage.getDescription() + " + mjölk";
     }
 }

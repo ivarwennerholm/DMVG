@@ -1,7 +1,7 @@
 
 public abstract class CondimentDecorator extends Beverage{
-    Beverage decoratedBeverage;
-    String getDescription() {
+    protected Beverage decoratedBeverage;
+    public String getDescription() {
         return this.decoratedBeverage.getDescription();
     }
 

@@ -1,10 +1,10 @@
 public class Decaf extends Beverage{
 
     public Decaf() {
-        super.description = "Decaf";
+        super.description = "koffeinfri kaffe";
     }
     @Override
-    int cost() {
+    public int cost() {
         return 30;
     }
 
