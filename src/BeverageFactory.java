@@ -9,12 +9,16 @@ public class BeverageFactory {
             beverage = new DarkRoast();
         else if (order.equalsIgnoreCase("darkroast+milk"))
             beverage = new Milk(new DarkRoast());
+        else if (order.equalsIgnoreCase("darkroast+mocha"))
+            beverage = new Mocha(new DarkRoast());
         else if (order.equalsIgnoreCase("darkroast+milk+mocha"))
             beverage = new Mocha(new Milk(new DarkRoast()));
         else if (order.equalsIgnoreCase("decaf"))
             beverage = new Decaf();
         else if (order.equalsIgnoreCase("decaf+milk"))
             beverage = new Milk(new Decaf());
+        else if (order.equalsIgnoreCase("decaf+mocha"))
+            beverage = new Mocha(new Decaf());
         else if (order.equalsIgnoreCase("decaf+milk+mocha"))
             beverage = new Milk(new Mocha(new Decaf()));
         else {
