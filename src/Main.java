@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,6 +10,7 @@ public class Main extends JFrame implements ActionListener {
     protected Beverage beverage;
     protected BeverageFactory beverageFactory = new BeverageFactory();
 
+    JPanel panel = new JPanel();
     JLabel drink = new JLabel("Kaffesort:");
     JLabel condiment = new JLabel("Tillval:");
     JCheckBox milk = new JCheckBox("Mjölk");
@@ -19,20 +22,24 @@ public class Main extends JFrame implements ActionListener {
     JLabel total = new JLabel();
 
     public Main() {
-        this.setLayout(new GridLayout(8, 1));
+        panel.setBorder(new EmptyBorder(0, 5, 0, 5));
+        panel.setLayout(new GridLayout(8, 1));
         buttonGroup.add(darkroast);
         buttonGroup.add(decaf);
         darkroast.setSelected(true);
-        this.add(drink);
-        this.add(darkroast);
-        this.add(decaf);
-        this.add(condiment);
-        this.add(milk);
-        this.add(mocha);
-        this.add(order);
-        this.add(total);
+
+        panel.add(drink);
+        panel.add(darkroast);
+        panel.add(decaf);
+        panel.add(condiment);
+        panel.add(milk);
+        panel.add(mocha);
+        panel.add(order);
+        panel.add(total);
+
         order.addActionListener(this);
 
+        this.add(panel);
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
